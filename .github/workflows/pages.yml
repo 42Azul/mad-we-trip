@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: '22'
       - name: Verify guide
-        run: node scripts/check.mjs
+        run: npm test
       - uses: actions/configure-pages@v5
       - name: Prepare Pages entry and guide
         run: |

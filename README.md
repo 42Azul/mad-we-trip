@@ -13,6 +13,7 @@ A mobile guide for Bastien, Sam, Fer and José, **23–25 October 2026**.
 - Google Maps routes with explicit origins, walking/transit choices and short multi-stop sections compatible with mobile waypoint limits.
 - Alternatives that explain when they fit, what they replace, cost assumptions and drawbacks.
 - Licensed photographs with creator, source and licence links. Neighbourhood views are labelled; no home photographs are included.
+- Full English, Spanish and French text, with a remembered language selector in the header and detail panels. `?lang=en`, `?lang=es` and `?lang=fr` links override the saved preference. Proper names, addresses and navigation URLs stay canonical.
 - Two-base logistics: Bastien with Fer in Pacífico, Sam with José in Quintana; separate Saturday breakfasts, a Sol meeting and Sunday churros together. Pair-specific outbound and return directions.
 - Optional timed reveals and browser-local visited stops. Future names, photos, source links and destinations stay hidden until their reveal or an intentional preview.
 
@@ -25,6 +26,8 @@ npm test
 ```
 
 - `dist/data.js`: itinerary, history, alternatives, references and photo metadata.
+- `dist/translations.js`: authored Spanish/French dictionaries keyed by the English source text.
+- `dist/i18n.js`: language preference, reversible text/attribute localization and language controls. It never rewrites URLs or route data.
 - `dist/app.js`: rendering, routes, maps and local preferences.
 - `dist/style.css`: responsive layout.
 - `dist/vendor/`: pinned OpenLayers 10.6.1 and ol-mapbox-style 13.6.0 browser bundles, CSS and licences.
@@ -51,4 +54,4 @@ Street map data: **© OpenStreetMap contributors**, OpenMapTiles and OpenFreeMap
 
 ## Verification
 
-`npm test` covers pair assignments, breakfast order and route origins, Madrid reveal boundaries and Sunday DST, hidden markup, fixed route origins, mobile waypoint limits, transit-route constraints, itinerary integrity, reference IDs and photo attribution. Browser review also covers street and historic map rendering, real Google Maps route navigation, 360/390 px layouts, place details and filters.
+`npm test` checks full translation coverage of content and rendered UI variants, plus pair assignments, breakfast order and route origins, Madrid reveal boundaries and Sunday DST, hidden markup, fixed route origins, mobile waypoint limits, transit-route constraints, itinerary integrity, reference IDs and photo attribution. Browser review also covers street and historic map rendering, real Google Maps route navigation, 360/390 px layouts, place details and filters.
