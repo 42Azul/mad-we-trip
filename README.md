@@ -6,13 +6,14 @@ A mobile guide for Bastien, Sam, Fer and José, **23–25 October 2026**.
 
 ## What is in the guide
 
-- Friday arrival and dinner, Saturday’s old town / MAN / Gran Vía route, and Sunday’s Trashumancia / Rastro plan.
+- Friday arrival and dinner, Saturday’s old town / MAN / Gran Vía route, and Sunday’s churros / Trashumancia / Rastro plan.
 - City and Spanish history, a suggested two-hour MAN visit, and references beside the relevant claims.
 - A street map with numbered stops, optional alternatives and host stations. OpenLayers renders it without WebGL.
 - A **1656 map** switch using Madrid City Council’s georeferenced Texeira scan, with the same place pins for comparison. The scan’s rectangular extent is not an urban boundary.
 - Google Maps routes with explicit origins, walking/transit choices and short multi-stop sections compatible with mobile waypoint limits.
 - Alternatives that explain when they fit, what they replace, cost assumptions and drawbacks.
 - Licensed photographs with creator, source and licence links. Neighbourhood views are labelled; no home photographs are included.
+- Two-base logistics: Bastien with Fer in Pacífico, Sam with José in Quintana; separate Saturday breakfasts, a Sol meeting and Sunday churros together. Pair-specific outbound and return directions.
 - Optional timed reveals and browser-local visited stops. Future names, photos, source links and destinations stay hidden until their reveal or an intentional preview.
 
 ## Development
@@ -50,4 +51,4 @@ Street map data: **© OpenStreetMap contributors**, OpenMapTiles and OpenFreeMap
 
 ## Verification
 
-`npm test` covers Madrid reveal boundaries and Sunday DST, hidden markup, fixed route origins, mobile waypoint limits, transit-route constraints, itinerary integrity, reference IDs and photo attribution. Browser review also covers street and historic map rendering, real Google Maps route navigation, 360/390 px layouts, place details and filters.
+`npm test` covers pair assignments, breakfast order and route origins, Madrid reveal boundaries and Sunday DST, hidden markup, fixed route origins, mobile waypoint limits, transit-route constraints, itinerary integrity, reference IDs and photo attribution. Browser review also covers street and historic map rendering, real Google Maps route navigation, 360/390 px layouts, place details and filters.

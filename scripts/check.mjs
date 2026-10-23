@@ -10,13 +10,13 @@ vm.runInContext(fs.readFileSync('dist/app.js','utf8').replace('render();tick();s
 const run=s=>vm.runInContext(s,sandbox);
 assert.equal(run("unlocked(DAYS[0].stops[3],Date.parse('2026-10-23T19:59:59Z'))"),false);
 assert.equal(run("unlocked(DAYS[0].stops[3],Date.parse('2026-10-23T20:00:00Z'))"),true);
-assert.equal(run("unlocked(DAYS[2].stops[0],Date.parse('2026-10-25T08:29:59Z'))"),false);
-assert.equal(run("unlocked(DAYS[2].stops[0],Date.parse('2026-10-25T08:30:00Z'))"),true);
+assert.equal(run("unlocked(DAYS[2].stops.find(s=>s.id==='trash'),Date.parse('2026-10-25T08:29:59Z'))"),false);
+assert.equal(run("unlocked(DAYS[2].stops.find(s=>s.id==='trash'),Date.parse('2026-10-25T08:30:00Z'))"),true);
 assert.match(run("timeLabel('2026-10-25T09:30:00+01:00')"),/09:30/);
 run("state.revealed=['equis']");
 assert.equal(run("unlocked(DAYS[0].stops[3],0)"),true);
 run("state.revealed=[];state.surprise=false");
-assert.equal(run("unlocked(DAYS[2].stops[0],0)"),true);
+assert.equal(run("unlocked(DAYS[2].stops.find(s=>s.id==='trash'),0)"),true);
 run("state.surprise=true");
 const locked=run("stopMarkup({...DAYS[0].stops[3],at:'2099-01-01T00:00:00Z'},3)");
 assert(!locked.includes('Sala Equis'));
@@ -45,7 +45,8 @@ run('state.day=1;state.surprise=true;state.revealed=[];state.history=false;state
 assert(!run('renderHistory()').includes('Guarrazar'));
 assert(!run('renderIdeas()').includes('Beti Jai'));
 assert(!run('renderMap()').includes('waypoints='));
-for(const name of ['Gran Vía','Pez Tortilla','Archaeological Museum']){assert(!run('renderMap()').includes(name));assert(!run('renderPlan()').includes(name));}
+assert(!run('renderMap()').includes('Gran Vía: Metrópolis'));
+for(const name of ['Gran Vía: Metrópolis','Pez Tortilla','Archaeological Museum']){assert(!run('renderMap()').includes(name));assert(!run('renderPlan()').includes(name));}
 run('state.surprise=false');
 assert(run('renderMap()').includes('waypoints='));
 assert(run('renderPlan()').includes('Gran Vía'));
@@ -56,4 +57,22 @@ for (const place of Object.values(data.places)) {
   if(place.photo) { assert(place.photo.author); assert(place.photo.license); assert(place.photo.page.startsWith('https://commons.wikimedia.org/')); }
 }
 assert(run("PLACES.paco.lng < -3.72"));
-console.log('PASS: Madrid/DST reveals, spoiler protection, explicit route origins, mobile waypoint limits, Gran Vía itinerary, references and photo attribution.');
+assert.equal(data.days[1].stops[0].id,'sol');
+assert(!data.days[1].stops.some(s=>s.place==='fer'));
+assert.match(data.places.fer.story,/Bastien stays with Fer/);
+assert.match(data.places.jose.story,/Sam stays with José/);
+assert.equal(data.days[2].stops[0].id,'churros');
+assert.equal(data.days[2].stops[1].id,'trash');
+assert(Date.parse(data.days[2].stops[0].at)<Date.parse(data.days[2].stops[1].at));
+run('state.surprise=true');
+assert.equal(run("unlocked(DAYS[2].stops[0],Date.parse('2026-10-25T07:29:59Z'))"),false);
+assert.equal(run("unlocked(DAYS[2].stops[0],Date.parse('2026-10-25T07:30:00Z'))"),true);
+run('state.day=1');
+assert.match(run('startMarkup()'),/Breakfast near home/);
+assert.match(run('startMarkup()'),/origin=Quintana/);
+assert.match(run('startMarkup()'),/origin=Pac/);
+// Sunday logistics must not leak a future breakfast address or direction link.
+const guarded=run("stopMarkup({...DAYS[2].stops[0],at:'2099-01-01T00:00:00Z'},0)");
+assert(!guarded.includes('San Ginés'));
+assert(!guarded.includes('maps/dir'));
+console.log('PASS: two-base logistics, Sunday churros,  Madrid/DST reveals, spoiler protection, explicit route origins, mobile waypoint limits, Gran Vía itinerary, references and photo attribution.');

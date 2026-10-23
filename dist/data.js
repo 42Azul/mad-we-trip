@@ -303,44 +303,58 @@ const REFERENCES = {
     "url": "https://www.man.es/man/en/coleccion/catalogo-cronologico/protohistoria/dama-elche.html",
     "scope": "Iberian sculpture and its context",
     "checked": "23 October 2026"
+  },
+  "sangines": {
+    "title": "San Ginés: address, hours and weekend queue",
+    "url": "https://chocolateriasangines.com/",
+    "publisher": "Chocolatería San Ginés",
+    "scope": "Pasadizo de San Ginés 5; founded 1894; no weekend reservations; pay at the till first",
+    "checked": "23 October 2026"
+  },
+  "churros1902": {
+    "title": "Chocolatería 1902: address and hours",
+    "url": "https://chocolateria1902.com/",
+    "publisher": "Chocolatería 1902",
+    "scope": "Calle de San Martín 2; daily 07:00–23:00",
+    "checked": "23 October 2026"
   }
 };
 const PLACES = {
   "fer": {
     "mapQuery": "Pacífico metro",
-    "name": "Fer’s base",
+    "name": "Fer + Bastien · Pacífico",
     "area": "Pacífico",
     "lat": 40.4015,
     "lng": -3.6751,
     "address": "Calle de Cavanilles · meet at Pacífico metro",
     "wiki": "https://en.wikipedia.org/wiki/Pac%C3%ADfico_(Madrid_Metro)",
     "wikiLabel": "Wikipedia · station",
-    "story": "Fer is on Calle de Cavanilles. The map pin is Pacífico metro; arrange the final meeting point with him.",
+    "story": "Bastien stays with Fer on Calle de Cavanilles. The pin marks Pacífico metro, not the flat; arrange the last few minutes with Fer.",
     "practical": "Pacífico: L1 and L6. Use L1 to reach Sol directly. The western part of L6 is closed on 24–25 October.",
     "kind": "home",
     "refs": [
       "metro"
     ],
-    "summary": "Drop bags at Fer’s near Pacífico. L1 goes directly to Sol.",
-    "why": "The Friday arrival point and Saturday breakfast area."
+    "summary": "Bastien’s base with Fer. L1 goes directly to Sol.",
+    "why": "Bastien drops his bags here on Friday. Saturday breakfast can stay at Fer’s neighbourhood bar."
   },
   "jose": {
     "mapQuery": "Quintana metro",
-    "name": "José’s base",
+    "name": "José + Sam · Quintana",
     "area": "Quintana",
     "lat": 40.4336,
     "lng": -3.6474,
     "address": "Calle de Ezequiel Solana · meet at Quintana metro",
     "wiki": "https://en.wikipedia.org/wiki/Quintana_(Madrid_Metro)",
     "wikiLabel": "Wikipedia · station",
-    "story": "José is on Calle de Ezequiel Solana. The map pin is Quintana metro; arrange the final meeting point with him.",
+    "story": "Sam stays with José on Calle de Ezequiel Solana. The pin marks Quintana metro, not the flat; arrange the last few minutes with José.",
     "practical": "Quintana: L5, with direct trains to Gran Vía, Callao, Ópera and La Latina.",
     "kind": "home",
     "refs": [
       "metro"
     ],
-    "summary": "Quintana, L5. Direct to Gran Vía and the old town.",
-    "why": "The second base, with a direct metro line to the centre."
+    "summary": "Sam’s base with José. L5 goes directly to the centre.",
+    "why": "A neighbourhood base with a direct line to Gran Vía, Callao and Ópera. No need to cross to Pacífico before meeting the others."
   },
   "retiro": {
     "name": "El Retiro",
@@ -1145,6 +1159,42 @@ const PLACES = {
       "granvia"
     ],
     "why": "A landmark turning point between Gran Vía and Malasaña."
+  },
+  "sangines": {
+    "name": "Chocolatería San Ginés",
+    "mapQuery": "Chocolatería San Ginés, Pasadizo de San Ginés 5",
+    "area": "Sol / Ópera",
+    "lat": 40.4167,
+    "lng": -3.7069,
+    "address": "Pasadizo de San Ginés 5",
+    "wiki": "https://en.wikipedia.org/wiki/Chocolater%C3%ADa_San_Gin%C3%A9s",
+    "kind": "food",
+    "refs": [
+      "sangines"
+    ],
+    "summary": "Sunday breakfast together: chocolate and churros before the flock.",
+    "why": "A Madrid classic since 1894, on a small passage between Sol and Ópera. It is a short walk from the Sunday event, so breakfast does not require another metro trip.",
+    "story": "San Ginés opened in 1894, when this part of central Madrid was busy with theatres and late-night cafés. Its chocolate and churros became a familiar stop after a night out. It is now a famous visitor destination too; come for the tradition, with a backup for the queue.",
+    "practical": "Meet 09:30; leave by 10:15. Sunday morning opening confirmed on the official site. No weekend reservations: buy the ticket at the till and hand it over when seated. Allow €6–10 per person as a budget estimate. If the queue looks longer than 15 minutes, try 1902 nearby.",
+    "look": "Order chocolate con churros, or porras if you prefer thicker fried dough. Ask for the portions you want to share; not everyone needs a separate chocolate."
+  },
+  "churros1902": {
+    "name": "Chocolatería 1902",
+    "mapQuery": "Chocolatería 1902, Calle de San Martín 2",
+    "area": "Sol / Ópera",
+    "lat": 40.4179,
+    "lng": -3.7063,
+    "address": "Calle de San Martín 2",
+    "wiki": "https://en.wikipedia.org/wiki/Sol_(Madrid)",
+    "wikiLabel": "Wikipedia · Sol neighbourhood",
+    "kind": "food",
+    "refs": [
+      "churros1902"
+    ],
+    "summary": "Nearby churros backup if San Ginés has too long a queue.",
+    "why": "Roughly five minutes from San Ginés, still within walking distance of Plaza de la Villa. It keeps everyone together without a detour.",
+    "story": "A family-run chocolatería whose history dates to 1902. This is another long-established address for churros, porras and chocolate in the centre, rather than a separate sightseeing stop.",
+    "practical": "Official hours: daily 07:00–23:00. Check the queue here too; it is not guaranteed to be quieter. Budget €6–10 each as an estimate. Leave breakfast by 10:15 for the event."
   }
 };
 const DAYS = [
@@ -1157,7 +1207,7 @@ const DAYS = [
     "range": "23 October",
     "pace": "Keep the arrival flexible",
     "budget": "€20–35",
-    "note": "Bastien lands at 17:00. If bags are not dropped by 19:00, skip the walk. Casa Paco is across town; dinner at 20:30 needs an on-time arrival.",
+    "note": "Bastien lands at 17:00 and goes to Fer’s. Sam stays with José. Meet directly at dinner; do not send José and Sam across to Pacífico first. If bags are not dropped by 19:00, skip Retiro.",
     "stops": [
       {
         "id": "arrival",
@@ -1165,7 +1215,7 @@ const DAYS = [
         "time": "17:00–18:45",
         "at": "2026-10-23T17:00:00+02:00",
         "hint": "Arrival and bags",
-        "desc": "Airport → Pacífico; allow 90–120 minutes from landing.",
+        "desc": "Bastien → Fer’s in Pacífico. Sam is already with José in Quintana; they do not need to come here.",
         "fixed": true
       },
       {
@@ -1174,7 +1224,7 @@ const DAYS = [
         "time": "18:45–19:30",
         "at": "2026-10-23T18:15:00+02:00",
         "hint": "Optional walk",
-        "desc": "Walk from Fer’s. Optional."
+        "desc": "Fer + Bastien: optional short walk after dropping bags. José + Sam can meet you directly at dinner."
       },
       {
         "id": "paco",
@@ -1182,7 +1232,7 @@ const DAYS = [
         "time": "20:30–22:00",
         "at": "2026-10-23T19:30:00+02:00",
         "hint": "Dinner",
-        "desc": "Allow 40–50 minutes from Retiro by metro and on foot."
+        "desc": "All four meet here at 20:30. Fer + Bastien: allow 40–50 minutes from Retiro. José + Sam: L5 to Callao, change to L3 for Argüelles, then walk."
       },
       {
         "id": "equis",
@@ -1200,29 +1250,20 @@ const DAYS = [
     "date": "24",
     "label": "Saturday",
     "theme": "Saturday: old town and archaeology",
-    "subtitle": "A walk through the centre, the river and a free afternoon at the MAN.",
+    "subtitle": "Breakfast near each base, meet in Sol, then old town, river and the MAN.",
     "range": "24 October",
     "pace": "The long walking day",
     "budget": "€30–50",
     "note": "Old town and river: roughly 5 km including detours. With the museum and evening, expect 10–14 km across the day. Cut the river if the morning runs late.",
     "stops": [
       {
-        "id": "breakfast",
-        "place": "fer",
-        "time": "09:30–10:15",
-        "at": "2026-10-24T09:00:00+02:00",
-        "hint": "Breakfast near Fer’s",
-        "desc": "Coffee and breakfast at Fer’s neighbourhood bar; choose on the day.",
-        "title": "Breakfast near Fer’s",
-        "summary": "Coffee, toast or a pincho at the neighbourhood bar. Fer will pick the place."
-      },
-      {
         "id": "sol",
         "place": "sol",
         "time": "10:45",
         "at": "2026-10-24T10:00:00+02:00",
         "hint": "Meet for the walk",
-        "desc": "L1 from Pacífico. L5 from Quintana to Gran Vía, then walk."
+        "desc": "All four: west side of Sol, at the start of Calle Mayor. Fer + Bastien: L1 direct. José + Sam: L5 to Gran Vía, then about 10 minutes on foot.",
+        "fixed": true
       },
       {
         "id": "mayor",
@@ -1327,20 +1368,29 @@ const DAYS = [
     "id": "sun",
     "date": "25",
     "label": "Sunday",
-    "theme": "Sunday: the flock and the Rastro",
-    "subtitle": "A fixed morning event, then lunch and a choice of afternoons.",
+    "theme": "Sunday: churros, the flock and the Rastro",
+    "subtitle": "Breakfast together, a fixed morning event, then the market and an easy afternoon.",
     "range": "25 October",
     "pace": "Leave the afternoon open",
-    "budget": "€25–40",
+    "budget": "€30–50",
     "note": "The clocks go back overnight: 03:00 becomes 02:00. All times shown are Madrid time. If choosing the Prado, move El Tigre to about 19:30.",
     "stops": [
+      {
+        "id": "churros",
+        "place": "sangines",
+        "time": "09:30–10:15",
+        "at": "2026-10-25T08:30:00+01:00",
+        "hint": "Chocolate and churros together",
+        "desc": "Meet all four at 09:30. L1 to Sol for Fer + Bastien; L5 to Ópera for José + Sam, then walk. Queue over 15 minutes? Try 1902 nearby. Leave by 10:15.",
+        "fixed": true
+      },
       {
         "id": "trash",
         "place": "trash",
         "time": "10:30–11:45",
         "at": "2026-10-25T09:30:00+01:00",
         "hint": "Sunday morning event",
-        "desc": "Aim to reach the Villa area by 10:30–10:45.",
+        "desc": "Walk about 10 minutes from breakfast; allow more for street closures and crowds. Reach Plaza de la Villa by 10:30–10:45.",
         "fixed": true
       },
       {
@@ -1376,10 +1426,23 @@ const DAYS = [
         "desc": "About 20 minutes from Santa Ana, or 25 minutes from the Prado."
       }
     ],
-    "distance": "About 5–8 km, depending on the afternoon"
+    "distance": "About 6–9 km, depending on the afternoon"
   }
 ];
 const IDEAS = [
+  {
+    "place": "churros1902",
+    "days": [
+      "sun"
+    ],
+    "type": "food",
+    "tag": "Breakfast backup",
+    "when": "If San Ginés has a queue over 15 minutes",
+    "replaces": "San Ginés breakfast, not the morning event",
+    "cost": "€6–10 / person, estimated",
+    "minutes": "30–40 min",
+    "tradeoff": "Five minutes away, but may also have a queue. Keep the 10:15 departure for Plaza de la Villa."
+  },
   {
     "place": "reina",
     "days": [
@@ -1616,6 +1679,39 @@ const ROUTES = [
     "note": "L3 to Sol, then walk."
   },
   {
+    "id": "fri-jose-dinner",
+    "day": "fri",
+    "title": "José + Sam → dinner",
+    "places": [
+      "jose",
+      "paco"
+    ],
+    "mode": "transit",
+    "note": "L5 Quintana → Callao, L3 → Argüelles, then walk. Meet the others at dinner, not in Pacífico."
+  },
+  {
+    "id": "sat-fer-meet",
+    "day": "sat",
+    "title": "Fer + Bastien → Sol",
+    "places": [
+      "fer",
+      "sol"
+    ],
+    "mode": "transit",
+    "note": "L1 direct. Leave the neighbourhood bar around 10:10; meet at the west side of Sol at 10:45."
+  },
+  {
+    "id": "sat-jose-meet",
+    "day": "sat",
+    "title": "José + Sam → Sol",
+    "places": [
+      "jose",
+      "sol"
+    ],
+    "mode": "transit",
+    "note": "L5 to Gran Vía, then walk about 10 minutes. Leave around 10:00; meet at 10:45."
+  },
+  {
     "id": "sat-oldtown",
     "day": "sat",
     "title": "Old town walk",
@@ -1701,6 +1797,17 @@ const ROUTES = [
     ],
     "mode": "walking",
     "note": "About 10 minutes on foot. La Vía Láctea is an optional next stop."
+  },
+  {
+    "id": "sun-breakfast-event",
+    "day": "sun",
+    "title": "Churros → Plaza de la Villa",
+    "places": [
+      "sangines",
+      "trash"
+    ],
+    "mode": "walking",
+    "note": "Leave breakfast by 10:15. Around 10 minutes on foot; keep extra time for street closures and crowds."
   }
 ];
 const HISTORY = {
