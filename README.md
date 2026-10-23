@@ -1,45 +1,53 @@
 # Madrid, entre amigos
 
-A mobile-first weekend guide for Bastien, Sam, Fer and José, 23–25 October 2026.
+A mobile guide for Bastien, Sam, Fer and José, **23–25 October 2026**.
 
-## Features
+**Live site:** https://42azul.github.io/mad-we-trip/
 
-- Three-day itinerary, with a short historical guide for each landmark.
-- MapLibre/OpenFreeMap maps, filtered by day, with both starting metro stations.
-- Optional surprise mode: future names, pins and directions unlock at explicit Madrid times, or by a voluntary early peek.
-- Separate nearby ideas and alternatives, without changing the main itinerary.
-- Directions from the visitor’s location, Pacífico or Quintana; Wikipedia and source links.
-- Browser-local visited stops and reveal preferences.
-- Responsive mobile navigation, accessible buttons, keyboard-friendly dialogs and reduced-motion support.
+## What is in the guide
+
+- Friday arrival and dinner, Saturday’s old town / MAN / Gran Vía route, and Sunday’s Trashumancia / Rastro plan.
+- City and Spanish history, a suggested two-hour MAN visit, and references beside the relevant claims.
+- A street map with numbered stops, optional alternatives and host stations. OpenLayers renders it without WebGL.
+- A **1656 map** switch using Madrid City Council’s georeferenced Texeira scan, with the same place pins for comparison. The scan’s rectangular extent is not an urban boundary.
+- Google Maps routes with explicit origins, walking/transit choices and short multi-stop sections compatible with mobile waypoint limits.
+- Alternatives that explain when they fit, what they replace, cost assumptions and drawbacks.
+- Licensed photographs with creator, source and licence links. Neighbourhood views are labelled; no home photographs are included.
+- Optional timed reveals and browser-local visited stops. Future names, photos, source links and destinations stay hidden until their reveal or an intentional preview.
 
 ## Development
 
-No build or package installation is required. Serve `dist/` with any static web server. Run checks with Node 22+:
+Serve `dist/` with a static web server. There is no build step or package installation.
 
 ```sh
 npm test
 ```
 
-Content lives in `dist/data.js`; behaviour in `dist/app.js`; appearance in `dist/style.css`.
+- `dist/data.js`: itinerary, history, alternatives, references and photo metadata.
+- `dist/app.js`: rendering, routes, maps and local preferences.
+- `dist/style.css`: responsive layout.
+- `dist/vendor/`: pinned OpenLayers 10.6.1 and ol-mapbox-style 13.6.0 browser bundles, CSS and licences.
+
+The itinerary renders before map libraries load. Street tiles, historic imagery and photographs need an internet connection. If a map service is unavailable, the place list and Google Maps links remain available.
 
 ## Publishing
 
-A GitHub Pages workflow is included. In repository **Settings → Pages → Build and deployment**, select **GitHub Actions**. Private repositories require a GitHub plan that supports Pages for private repositories. A Pages site may be public even when its repository is private: choose the intended audience before enabling it. No access-control claim is made by this client-side application.
+The workflow in `.github/workflows/pages.yml` verifies the guide and deploys `dist/` to GitHub Pages on pushes to `main`. Pages must use **GitHub Actions** as its source.
 
-The project is also prepared for static Sites hosting. The Sites-specific `.openai/hosting.json` is maintained only in the hosting checkout, not this GitHub repository.
+A private Sites copy is maintained separately. Its `.openai/hosting.json` belongs to the Sites checkout and is not pushed into this GitHub repository.
 
-## Information and privacy
+## Information, images and privacy
 
-The content was checked on 23 October 2026. It is a dated curated guide, not a live updates service. Opening hours, fares, routes, queues and event timings can change. Links to official sources are included in the app. Google Maps handles current routing.
+Sources were checked **23 October 2026**. This is a dated plan, not a live opening-status, weather or availability service. The guide links to official sources and identifies budget allowances as estimates. No tables or tickets have been reserved.
 
-Home pins are the Pacífico and Quintana metro stations, **not exact flats**. Street names were supplied by the hosts; no building number or personal contact details are included.
+Home map pins mark **Pacífico and Quintana stations**, not flats. No building numbers or contact details are published. Google Maps uses the selected starting station; choosing “My location” instead delegates location detection to Google Maps.
 
-Surprise mode is a playful presentation feature, **not security**. All content is in the client-side source, and visitors can reveal it voluntarily. It uses explicit ISO offsets for the 25 October daylight-saving change. Reveals and visited choices are per browser, not shared between friends. Local storage is optional; the guide still works if unavailable.
+Surprise mode is a presentation feature, not access control: the data is in the page source and visitors can reveal it early. Local preferences and visited stops are per browser. Explicit ISO time offsets account for the Madrid daylight-saving change on 25 October.
 
-Maps need an internet connection. If WebGL or the map library is unavailable, a clickable location overview is shown instead of a street map. Individual Google Maps directions remain available. The cloud preview has WebGL disabled, so the overview was visually tested; the full vector basemap could not be visually verified there. No offline caching of map tiles is attempted. Map pins are approximate and should not be used as entrance-level navigation.
+Photographs are linked from Wikimedia Commons and include creator / source / licence metadata in `dist/data.js` and the visible captions. Images are resized, and card previews may be cropped. Original file pages provide full attribution and available resolutions. The Texeira map overview and sheet detail are public-domain reproductions; the map comparison uses the City Council’s georeferenced service with its own attribution.
 
-## Sources and attribution
+Street map data: **© OpenStreetMap contributors**, OpenMapTiles and OpenFreeMap. Historic raster: **Ayuntamiento de Madrid, Geoportal**, Pedro Texeira’s 1656 map. A historic drawing’s georeferencing is approximate and should not be used for navigation. OpenLayers and ol-mapbox-style licences are included in `dist/vendor/`.
 
-Official visitor information: MAN, Museo del Prado, Museo Reina Sofía, Madrid City Council, CRTM, Madrid Tourism and venue websites. Bars without a dedicated Wikipedia article link to a clearly labelled neighbourhood article. The app includes sources beside the relevant details.
+## Verification
 
-Map data © OpenStreetMap contributors, available under ODbL, with OpenFreeMap and OpenMapTiles attribution displayed by the map. MapLibre GL JS 5.8.0 is loaded from unpkg (BSD-3-Clause). No API key is needed. The postcard illustration is an original decorative SVG, not a geographic diagram.
+`npm test` covers Madrid reveal boundaries and Sunday DST, hidden markup, fixed route origins, mobile waypoint limits, transit-route constraints, itinerary integrity, reference IDs and photo attribution. Browser review also covers street and historic map rendering, real Google Maps route navigation, 360/390 px layouts, place details and filters.
