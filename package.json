@@ -1,0 +1,1 @@
+{"name":"mad-we-trip","version":"1.0.0","private":true,"description":"A phone-friendly Madrid weekend guide","scripts":{"test":"node scripts/check.mjs"}}
