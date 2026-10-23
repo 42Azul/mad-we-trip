@@ -32,7 +32,7 @@ The itinerary renders before map libraries load. Street tiles, historic imagery 
 
 ## Publishing
 
-The workflow in `.github/workflows/pages.yml` verifies the guide and deploys `dist/` to GitHub Pages on pushes to `main`. Pages must use **GitHub Actions** as its source.
+The workflow in `.github/workflows/pages.yml` verifies the guide and deploys the root entry plus `dist/` on pushes to `main`. The root entry opens `dist/` while preserving a section hash. The same layout also works when Pages is set to **Deploy from a branch → main → / (root)**. `.nojekyll` prevents a branch build from turning the README into the homepage. Both publishing modes therefore serve the same guide and asset paths.
 
 A private Sites copy is maintained separately. Its `.openai/hosting.json` belongs to the Sites checkout and is not pushed into this GitHub repository.
 
