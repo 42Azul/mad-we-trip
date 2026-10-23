@@ -36,7 +36,7 @@ Home pins are the Pacífico and Quintana metro stations, **not exact flats**. St
 
 Surprise mode is a playful presentation feature, **not security**. All content is in the client-side source, and visitors can reveal it voluntarily. It uses explicit ISO offsets for the 25 October daylight-saving change. Reveals and visited choices are per browser, not shared between friends. Local storage is optional; the guide still works if unavailable.
 
-Maps need an internet connection. If tiles or the map library fail, individual Google Maps directions remain available. No offline caching of map tiles is attempted. Map pins are approximate and should not be used as entrance-level navigation.
+Maps need an internet connection. If WebGL or the map library is unavailable, a clickable location overview is shown instead of a street map. Individual Google Maps directions remain available. The cloud preview has WebGL disabled, so the overview was visually tested; the full vector basemap could not be visually verified there. No offline caching of map tiles is attempted. Map pins are approximate and should not be used as entrance-level navigation.
 
 ## Sources and attribution
 
