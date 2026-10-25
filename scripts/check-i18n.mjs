@@ -1,10 +1,15 @@
 import fs from 'node:fs';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
+// Keep reveal coverage independent of the day CI happens to run.
+class TestDate extends Date {
+  constructor(...args) { super(...(args.length ? args : ['2026-10-23T08:00:00Z'])); }
+  static now() { return Date.parse('2026-10-23T08:00:00Z'); }
+}
 const noop=()=>{};
 const elements=new Map();
 const $=s=>{if(!elements.has(s))elements.set(s,{addEventListener:noop,classList:{add:noop,remove:noop},close:noop,scrollIntoView:noop,focus:noop});return elements.get(s);};
-const sandbox={URLSearchParams,URL,Intl,Date,console,setTimeout,clearTimeout,localStorage:{getItem:()=>null,setItem:noop},location:{hash:'',search:''},document:{querySelector:$,addEventListener:noop},window:{addEventListener:noop}};
+const sandbox={URLSearchParams,URL,Intl,Date:TestDate,console,setTimeout,clearTimeout,localStorage:{getItem:()=>null,setItem:noop},location:{hash:'',search:''},document:{querySelector:$,addEventListener:noop},window:{addEventListener:noop}};
 vm.createContext(sandbox);
 for(const file of ['data.js','translations.js','i18n.js','app.js'])vm.runInContext(fs.readFileSync('dist/'+file,'utf8').replace('render();tick();setInterval(tick,30000);',''),sandbox);
 const run=src=>vm.runInContext(src,sandbox);

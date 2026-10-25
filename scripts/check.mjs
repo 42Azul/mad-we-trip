@@ -1,9 +1,14 @@
 import fs from 'node:fs';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
+// Keep reveal coverage independent of the day CI happens to run.
+class TestDate extends Date {
+  constructor(...args) { super(...(args.length ? args : ['2026-10-23T08:00:00Z'])); }
+  static now() { return Date.parse('2026-10-23T08:00:00Z'); }
+}
 const noop=()=>{};
 const element={addEventListener:noop,classList:{add:noop,remove:noop},close:noop};
-const sandbox={URLSearchParams,Intl,Date,console,setTimeout,clearTimeout,localStorage:{getItem:()=>null,setItem:noop},location:{hash:''},document:{querySelector:()=>element,addEventListener:noop},window:{addEventListener:noop}};
+const sandbox={URLSearchParams,Intl,Date:TestDate,console,setTimeout,clearTimeout,localStorage:{getItem:()=>null,setItem:noop},location:{hash:''},document:{querySelector:()=>element,addEventListener:noop},window:{addEventListener:noop}};
 vm.createContext(sandbox);
 vm.runInContext(fs.readFileSync('dist/data.js','utf8'),sandbox);
 vm.runInContext(fs.readFileSync('dist/app.js','utf8').replace('render();tick();setInterval(tick,30000);',''),sandbox);

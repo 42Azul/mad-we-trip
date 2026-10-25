@@ -31,17 +31,17 @@ const REFERENCES = {
   },
   "prado": {
     "title": "Prado: visit information",
-    "url": "https://www.museodelprado.es/visita/prepara-tu-visita",
+    "url": "https://www.museodelprado.es/visita/horarios-y-tarifas",
     "publisher": "Museo del Prado",
-    "scope": "Hours and admission",
-    "checked": "23 October 2026"
+    "scope": "Sunday closes at 19:00; last entry 30 minutes before; gallery clearance 10 minutes before",
+    "checked": "25 October 2026"
   },
   "pradoFree": {
     "title": "Prado: free collection hours",
-    "url": "https://entradas.museodelprado.es/",
+    "url": "https://www.museodelprado.es/museo/carta-de-servicios",
     "publisher": "Museo del Prado",
-    "scope": "Sunday 17:00–19:00; ticket availability is not checked",
-    "checked": "23 October 2026"
+    "scope": "Free collection access on Sunday 17:00–19:00; capacity and queues still apply",
+    "checked": "25 October 2026"
   },
   "reina": {
     "title": "Reina Sofía: opening hours and admission",
@@ -196,7 +196,7 @@ const REFERENCES = {
     "url": "https://www.esmadrid.com/informacion-turistica/museo-de-san-isidro-los-origenes-de-madrid",
     "publisher": "Madrid Tourism",
     "scope": "Tuesday–Sunday 10:00–20:00; free",
-    "checked": "23 October 2026"
+    "checked": "25 October 2026"
   },
   "historia": {
     "title": "Museo de Historia: hours and free entry",
@@ -801,11 +801,11 @@ const PLACES = {
     "wiki": "https://es.wikipedia.org/wiki/Barrio_de_las_Letras",
     "wikiLabel": "Wikipedia · Spanish",
     "story": "The streets around Huertas and Santa Ana are associated with Cervantes, Lope de Vega and other writers of Spain’s Golden Age. This is an easy afternoon walk, with cafés and taverns close together.",
-    "practical": "Allow 45–60 minutes for a walk, longer with a café. If choosing the Prado at 17:00, leave time to walk there and queue.",
+    "practical": "Sunday: a short café stop before the Prado. Leave around 16:10 for the museum queue. If choosing the smaller San Isidro alternative, there is more time to wander here.",
     "kind": "walk",
     "refs": [],
     "look": "Look for the literary quotations set into Calle de las Huertas. La Venencia is a sherry option nearby, but its published afternoon break means it suits an evening drink better.",
-    "summary": "Coffee and a short walk; or replace this block with the Prado at 17:00.",
+    "summary": "Coffee and a short literary-quarter walk on the way to the Prado.",
     "why": "A compact walk connected to the writers of the Golden Age."
   },
   "tigre": {
@@ -822,7 +822,7 @@ const PLACES = {
     "refs": [
       "tigre"
     ],
-    "summary": "Drinks with tapas at Infantas 30. Eat later if choosing the Prado.",
+    "summary": "Drinks with tapas at Infantas 30, after the Prado around 19:45.",
     "why": "Large tapas with drinks suit the group’s cheap final meal."
   },
   "reina": {
@@ -860,16 +860,16 @@ const PLACES = {
     "address": "Paseo del Prado",
     "wiki": "https://en.wikipedia.org/wiki/Museo_del_Prado",
     "story": "For a first visit, choose Velázquez’s Las Meninas, Goya’s royal portraits and later paintings, and Bosch’s Garden of Earthly Delights. Check the gallery map rather than relying on fixed room numbers.",
-    "practical": "Sunday collection entry is free 17:00–19:00; queues can use part of that time. The general entry shown by the museum is €15. Choose the paid daytime visit if a queue would spoil the afternoon.",
+    "practical": "Sunday collection entry is free 17:00–19:00. Aim to join the queue around 16:30; waiting can shorten the visit and admission is not guaranteed. Last access is 18:30 and rooms start clearing at 18:50. The general ticket is €15. Free collection hours do not include every temporary exhibition. No tickets reserved.",
     "tickets": "https://entradas.museodelprado.es/",
     "kind": "museum",
     "refs": [
       "prado",
       "pradoFree"
     ],
-    "look": "Las Meninas was painted for the royal court. Compare the figures looking out of the painting with the king and queen reflected at the back.",
+    "look": "Start with Las Meninas: who looks at whom, and why are the king and queen in the mirror? Then choose Goya’s court portraits or the Black Paintings for a very different view of Spain. Bosch is an extra if there is time; use the current floor plan instead of fixed room numbers.",
     "summary": "Sunday 17:00–19:00 free collection slot, with a possible queue.",
-    "why": "The clearest classic art-museum option for a first Madrid visit.",
+    "why": "A first visit to Madrid deserves its major painting collection. Velázquez and Goya connect the royal court and later Spain to the places you walked through on Saturday.",
     "photo": {
       "file": "Museo del Prado 2016 (25185969599).jpg",
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Museo_del_Prado_2016_%2825185969599%29.jpg/1280px-Museo_del_Prado_2016_%2825185969599%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1368,12 +1368,12 @@ const DAYS = [
     "id": "sun",
     "date": "25",
     "label": "Sunday",
-    "theme": "Sunday: churros, the flock and the Rastro",
-    "subtitle": "Breakfast together, a fixed morning event, then the market and an easy afternoon.",
+    "theme": "Sunday: the flock, Rastro and the Prado",
+    "subtitle": "Churros and the flock, the Rastro, then coffee in Letras and a free Prado visit.",
     "range": "25 October",
-    "pace": "Leave the afternoon open",
+    "pace": "A proper museum afternoon",
     "budget": "€30–50",
-    "note": "The clocks go back overnight: 03:00 becomes 02:00. All times shown are Madrid time. If choosing the Prado, move El Tigre to about 19:30.",
+    "note": "After lunch, keep Letras to a short café stop. Aim for the Prado queue around 16:30 for the free 17:00–19:00 collection window. Galleries start clearing at 18:50. Dinner at El Tigre moves to 19:45.",
     "stops": [
       {
         "id": "churros",
@@ -1412,21 +1412,31 @@ const DAYS = [
       {
         "id": "letras",
         "place": "letras",
-        "time": "15:30–18:30",
+        "time": "15:30–16:10",
         "at": "2026-10-25T15:00:00+01:00",
-        "hint": "Afternoon options",
-        "desc": "20 minutes from the lunch area. Prado is the museum alternative."
+        "hint": "Coffee and a short walk",
+        "desc": "Walk about 20 minutes from lunch to Santa Ana. Take a café break, then leave around 16:10 for the Prado, another 15–20 minutes on foot.",
+        "summary": "A short coffee stop in Letras before the museum, rather than a whole unplanned afternoon."
+      },
+      {
+        "id": "prado-sun",
+        "place": "prado",
+        "time": "17:00–18:50",
+        "at": "2026-10-25T15:30:00+01:00",
+        "hint": "Free afternoon museum",
+        "desc": "Join the queue around 16:30. The collection is free 17:00–19:00; entry depends on the queue and capacity. Galleries start clearing at 18:50. No tickets reserved.",
+        "summary": "A focused first Prado visit: Velázquez and Goya, with Bosch if there is time."
       },
       {
         "id": "tigre",
         "place": "tigre",
-        "time": "19:00–20:30",
-        "at": "2026-10-25T18:15:00+01:00",
+        "time": "19:45–21:00",
+        "at": "2026-10-25T18:45:00+01:00",
         "hint": "Final meal",
-        "desc": "About 20 minutes from Santa Ana, or 25 minutes from the Prado."
+        "desc": "Allow about 25–30 minutes on foot from the Prado. Take it slowly after the museum; Gran Vía has L1 and L5 for the two routes home."
       }
     ],
-    "distance": "About 6–9 km, depending on the afternoon"
+    "distance": "About 7–10 km, plus time standing in the museum"
   }
 ];
 const IDEAS = [
@@ -1489,12 +1499,12 @@ const IDEAS = [
       "sun"
     ],
     "type": "museum",
-    "tag": "Rain / shorter day",
-    "when": "After Vistillas, or after Sunday lunch",
-    "replaces": "The river; or the longer Sunday afternoon",
+    "tag": "Smaller free museum",
+    "when": "Sunday 15:45–16:45 after lunch, or Saturday after Vistillas",
+    "replaces": "The Prado and its queue; choose before leaving La Latina",
     "cost": "Free",
     "minutes": "45–60 min",
-    "tradeoff": "Smaller than the MAN; useful for Madrid history rather than a major collection."
+    "tradeoff": "Always free and close to lunch. Madrid archaeology and a Renaissance courtyard rather than a major painting collection. Open until 20:00; keep Letras afterwards if you want."
   },
   {
     "place": "campo",
@@ -1587,19 +1597,6 @@ const IDEAS = [
     "cost": "Check at door",
     "minutes": "5 min from Camacho",
     "tradeoff": "Entry and music depend on the evening; no specific show is booked."
-  },
-  {
-    "place": "prado",
-    "days": [
-      "sun"
-    ],
-    "type": "museum",
-    "tag": "Classic first visit",
-    "when": "17:00–19:00; arrive earlier for the queue",
-    "replaces": "The long Letras afternoon; dinner moves later",
-    "cost": "Free collection slot",
-    "minutes": "Up to 2 h",
-    "tradeoff": "The queue reduces looking time. Paid daytime entry is €15 according to the museum."
   },
   {
     "place": "retiro",
@@ -1778,14 +1775,14 @@ const ROUTES = [
   {
     "id": "sun-afternoon",
     "day": "sun",
-    "title": "Lunch → Letras → final meal",
+    "title": "Lunch → Letras → Prado",
     "places": [
       "almeria",
       "letras",
-      "tigre"
+      "prado"
     ],
     "mode": "walking",
-    "note": "Around 3 km. Use individual directions if choosing the Prado instead."
+    "note": "Walk to Santa Ana for coffee, then reach the Prado queue around 16:30. Allow 35–45 minutes of walking across the two legs."
   },
   {
     "id": "sat-drinks",
@@ -1808,6 +1805,17 @@ const ROUTES = [
     ],
     "mode": "walking",
     "note": "Leave breakfast by 10:15. Around 10 minutes on foot; keep extra time for street closures and crowds."
+  },
+  {
+    "id": "sun-prado-dinner",
+    "day": "sun",
+    "title": "Prado → dinner",
+    "places": [
+      "prado",
+      "tigre"
+    ],
+    "mode": "walking",
+    "note": "About 25–30 minutes on foot. Dinner around 19:45, then L1 or L5 from Gran Vía for home."
   }
 ];
 const HISTORY = {

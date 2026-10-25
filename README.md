@@ -6,7 +6,7 @@ A mobile guide for Bastien, Sam, Fer and José, **23–25 October 2026**.
 
 ## What is in the guide
 
-- Friday arrival and dinner, Saturday’s old town / MAN / Gran Vía route, and Sunday’s churros / Trashumancia / Rastro plan.
+- Friday arrival and dinner, Saturday’s old town / MAN / Gran Vía route, and Sunday’s churros / Trashumancia / Rastro / Prado plan.
 - City and Spanish history, a suggested two-hour MAN visit, and references beside the relevant claims.
 - A street map with numbered stops, optional alternatives and host stations. OpenLayers renders it without WebGL.
 - A **1656 map** switch using Madrid City Council’s georeferenced Texeira scan, with the same place pins for comparison. The scan’s rectangular extent is not an urban boundary.
@@ -42,7 +42,7 @@ A private Sites copy is maintained separately. Its `.openai/hosting.json` belong
 
 ## Information, images and privacy
 
-Sources were checked **23 October 2026**. This is a dated plan, not a live opening-status, weather or availability service. The guide links to official sources and identifies budget allowances as estimates. No tables or tickets have been reserved.
+Sources were checked **23 October 2026**; Sunday museum hours were rechecked **25 October 2026**. This is a dated plan, not a live opening-status, weather or availability service. The guide links to official sources and identifies budget allowances as estimates. No tables or tickets have been reserved.
 
 Home map pins mark **Pacífico and Quintana stations**, not flats. No building numbers or contact details are published. Google Maps uses the selected starting station; choosing “My location” instead delegates location detection to Google Maps.
 
