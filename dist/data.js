@@ -110,8 +110,8 @@ const REFERENCES = {
     "title": "Trashumancia: 2026 route and arrival time",
     "url": "https://diario.madrid.es/blog/notas-de-prensa/un-rebano-de-1-400-ovejas-y-cabras-protagoniza-la-fiesta-de-la-trashumancia-el-cambio-de-recorrido-llevara-la-recepcion-municipal-a-la-plaza-de-la-villa/",
     "publisher": "Madrid City Council",
-    "scope": "Sunday 25 October; Villa arrival approximately 11:15–11:25",
-    "checked": "23 October 2026",
+    "scope": "2026 route includes Toledo and Cebada; official Villa estimate 11:15–11:25; later timings are our estimates",
+    "checked": "25 October 2026",
     "published": "22 October 2026"
   },
   "retiro": {
@@ -317,6 +317,20 @@ const REFERENCES = {
     "publisher": "Chocolatería 1902",
     "scope": "Calle de San Martín 2; daily 07:00–23:00",
     "checked": "23 October 2026"
+  },
+  "santaana": {
+    "title": "Santa Ana: address, morning hours and indicative prices",
+    "publisher": "Guidavera",
+    "url": "https://guidavera.com/spain/madrid/brunch/churreria-santa-ana",
+    "scope": "Calle de Santa Ana 5; takeaway churros and porras; prices are indicative",
+    "checked": "25 October 2026"
+  },
+  "santaanaReviews": {
+    "title": "Santa Ana: reviews and rating",
+    "publisher": "POS.do",
+    "url": "https://www.pos.do/es/madrid/restaurante/churreria-santa-ana",
+    "scope": "Listing shows 4.7/5; ratings and review counts can change",
+    "checked": "25 October 2026"
   }
 };
 const PLACES = {
@@ -730,21 +744,22 @@ const PLACES = {
   },
   "trash": {
     "name": "Fiesta de la Trashumancia",
-    "area": "Plaza de la Villa",
-    "lat": 40.4153,
-    "lng": -3.7108,
-    "address": "Plaza de la Villa · Calle Mayor approaches",
+    "area": "Toledo / Cebada",
+    "lat": 40.41185,
+    "lng": -3.70865,
+    "address": "Calle de Toledo · between Cava Alta and Plaza de la Cebada",
     "wiki": "https://en.wikipedia.org/wiki/Transhumance",
     "wikiLabel": "Wikipedia · transhumance",
     "story": "The Madrid festival began in 1994 to defend livestock routes and extensive grazing. The symbolic payment of maravedís recalls a 1418 agreement between the Mesta and Madrid’s council. The livestock tradition is old; this city festival is modern.",
-    "practical": "Sunday 25 October. Reach the Villa area at 10:30–10:45. The council estimates the flock’s arrival at 11:15–11:25. These are approximate event times, not an appointment.",
+    "practical": "Be in position by 11:30 on Calle de Toledo, between Cava Alta and Plaza de la Cebada. We estimate passage around 11:50–12:15; no exact time is confirmed here. The council’s published estimate is 11:15–11:25 at Plaza de la Villa, earlier on the route. Stay on the pavement and follow the stewards.",
     "kind": "event",
     "refs": [
       "trash"
     ],
-    "look": "The 2026 route changes: it goes to Plaza de la Villa and Plaza Mayor, not Sol or Cibeles. Afterwards it continues towards La Cebada and San Francisco before returning to Casa de Campo.",
-    "summary": "At Plaza de la Villa around 11:15–11:25. Arrive by 10:45.",
-    "why": "It is a dated event this weekend, connected to land use and rural history."
+    "look": "Announced route: Casa de Campo → Puente del Rey → Cuesta de la Vega → Duque de Nájera → Calle Mayor → Plaza de la Villa → Plaza Mayor → Calle de Toledo → Plaza de la Cebada → Carrera de San Francisco → Bailén, then back towards Casa de Campo. Villa is estimated at 11:15–11:25 by the council; about 11:40 at Plaza Mayor and 11:50–12:15 at Toledo/Cebada are planning estimates, not confirmed appointments.",
+    "summary": "Watch from Toledo/Cebada: arrive by 11:30; estimated flock passage 11:50–12:15.",
+    "why": "The straight view along Calle de Toledo gives a useful angle for photographs and puts you close to the Rastro afterwards. The announced flock has 1,250 sheep and 160 goats.",
+    "mapQuery": "Calle de Toledo esquina Calle de la Cava Alta"
   },
   "rastro": {
     "mapQuery": "Plaza de Cascorro",
@@ -1195,6 +1210,44 @@ const PLACES = {
     "why": "Roughly five minutes from San Ginés, still within walking distance of Plaza de la Villa. It keeps everyone together without a detour.",
     "story": "A family-run chocolatería whose history dates to 1902. This is another long-established address for churros, porras and chocolate in the centre, rather than a separate sightseeing stop.",
     "practical": "Official hours: daily 07:00–23:00. Check the queue here too; it is not guaranteed to be quieter. Budget €6–10 each as an estimate. Leave breakfast by 10:15 for the event."
+  },
+  "tirso": {
+    "name": "Tirso de Molina · meeting point",
+    "area": "Tirso de Molina",
+    "lat": 40.4123,
+    "lng": -3.7047,
+    "mapQuery": "Tirso de Molina metro station",
+    "address": "Plaza de Tirso de Molina · metro entrance",
+    "wiki": "https://en.wikipedia.org/wiki/Tirso_de_Molina_(Madrid_Metro)",
+    "wikiLabel": "Wikipedia · station",
+    "kind": "meeting",
+    "refs": [
+      "metro"
+    ],
+    "summary": "Sunday 10:45: three people meet here before walking to the churrería.",
+    "why": "A shared meeting point on L1, with a short walk to the Rastro streets and Santa Ana.",
+    "story": "Two people come from Pacífico on L1 directly. The third comes from Quintana on L5 to Gran Vía, then changes to L1 for Tirso de Molina. This Sunday is a group of three; the Friday and Saturday arrangements stay as recorded.",
+    "practical": "Meet at 10:45 by a metro entrance on the square; agree the exact exit in the group chat. Then allow 10–15 minutes on foot to Calle de Santa Ana 5."
+  },
+  "santaana": {
+    "name": "Churrería Santa Ana",
+    "area": "Rastro / La Latina",
+    "lat": 40.409965,
+    "lng": -3.707967,
+    "mapQuery": "Churrería Santa Ana, Calle de Santa Ana 5",
+    "address": "Calle de Santa Ana 5",
+    "wiki": "https://en.wikipedia.org/wiki/El_Rastro",
+    "wikiLabel": "Wikipedia · Rastro neighbourhood",
+    "kind": "food",
+    "refs": [
+      "santaana",
+      "santaanaReviews"
+    ],
+    "summary": "Takeaway churros and porras at 11:00–11:15: nine churros and four porras to share between three.",
+    "why": "A traditional takeaway counter in the Rastro neighbourhood. It links breakfast, the flock and the market without another metro journey.",
+    "story": "A small, long-established churrería selling churros, porras and chocolate to take away. The linked review listing gives 4.7/5; ratings change. This is a food stop for fresh churros and thick porras, rather than a sit-down café.",
+    "practical": "Aim for 11:00–11:15. Indicative unit prices: €0.40–0.50 per churro and €0.50–0.55 per porra. Budget about €6.50–7 for nine churros and four porras, for all three, excluding drinks. These are estimates, not a confirmed current menu. Check the board, order to take away and keep time for the flock.",
+    "look": "No table needed: collect the paper bag and continue towards Calle de Toledo and Plaza de la Cebada. Aim to be in position by 11:30."
   }
 };
 const DAYS = [
@@ -1369,28 +1422,37 @@ const DAYS = [
     "date": "25",
     "label": "Sunday",
     "theme": "Sunday: the flock, Rastro and the Prado",
-    "subtitle": "Churros and the flock, the Rastro, then coffee in Letras and a free Prado visit.",
+    "subtitle": "Three people: Tirso at 10:45, Santa Ana churros, the flock at Toledo/Cebada, then the Rastro and Prado.",
     "range": "25 October",
     "pace": "A proper museum afternoon",
     "budget": "€30–50",
     "note": "After lunch, keep Letras to a short café stop. Aim for the Prado queue around 16:30 for the free 17:00–19:00 collection window. Galleries start clearing at 18:50. Dinner at El Tigre moves to 19:45.",
     "stops": [
       {
-        "id": "churros",
-        "place": "sangines",
-        "time": "09:30–10:15",
+        "id": "tirso-meet",
+        "place": "tirso",
+        "time": "10:45",
         "at": "2026-10-25T08:30:00+01:00",
-        "hint": "Chocolate and churros together",
-        "desc": "Meet all four at 09:30. L1 to Sol for Fer + Bastien; L5 to Ópera for José + Sam, then walk. Queue over 15 minutes? Try 1902 nearby. Leave by 10:15.",
+        "hint": "Meet in Tirso de Molina",
+        "desc": "Two from Pacífico: L1 direct. One from Quintana: L5 to Gran Vía, then L1 to Tirso. Walk together for 10–15 minutes to Santa Ana.",
+        "fixed": true
+      },
+      {
+        "id": "churros",
+        "place": "santaana",
+        "time": "11:00–11:15",
+        "at": "2026-10-25T08:30:00+01:00",
+        "hint": "Churros and porras to share",
+        "desc": "Calle de Santa Ana 5. Buy nine churros and four porras for the three of you; budget €6.50–7 total, drinks extra. Then walk to Toledo/Cebada and be in position before 11:30.",
         "fixed": true
       },
       {
         "id": "trash",
         "place": "trash",
-        "time": "10:30–11:45",
-        "at": "2026-10-25T09:30:00+01:00",
+        "time": "11:30–12:15",
+        "at": "2026-10-25T10:45:00+01:00",
         "hint": "Sunday morning event",
-        "desc": "Walk about 10 minutes from breakfast; allow more for street closures and crowds. Reach Plaza de la Villa by 10:30–10:45.",
+        "desc": "Stand on Calle de Toledo between Cava Alta and Plaza de la Cebada. Expected passage 11:50–12:15 is an estimate, not an official time. Stay until the flock has passed.",
         "fixed": true
       },
       {
@@ -1399,7 +1461,7 @@ const DAYS = [
         "time": "12:15–14:00",
         "at": "2026-10-25T11:45:00+01:00",
         "hint": "Sunday market",
-        "desc": "10–15 minutes from Plaza de la Villa; allow more for the crowds."
+        "desc": "After the flock, walk about 5–10 minutes to Cascorro and Ribera de Curtidores. Aim for 12:15–14:00; slide the start later if the procession is delayed."
       },
       {
         "id": "almeria",
@@ -1440,19 +1502,6 @@ const DAYS = [
   }
 ];
 const IDEAS = [
-  {
-    "place": "churros1902",
-    "days": [
-      "sun"
-    ],
-    "type": "food",
-    "tag": "Breakfast backup",
-    "when": "If San Ginés has a queue over 15 minutes",
-    "replaces": "San Ginés breakfast, not the morning event",
-    "cost": "€6–10 / person, estimated",
-    "minutes": "30–40 min",
-    "tradeoff": "Five minutes away, but may also have a queue. Keep the 10:15 departure for Plaza de la Villa."
-  },
   {
     "place": "reina",
     "days": [
@@ -1763,14 +1812,14 @@ const ROUTES = [
   {
     "id": "sun-market",
     "day": "sun",
-    "title": "Morning event → market → lunch",
+    "title": "Toledo/Cebada → Rastro → lunch",
     "places": [
       "trash",
       "rastro",
       "almeria"
     ],
     "mode": "walking",
-    "note": "Short distances, but allow for the flock and the market crowds."
+    "note": "After the flock, walk to Cascorro and Ribera de Curtidores. The 12:15 start depends on when the animals pass."
   },
   {
     "id": "sun-afternoon",
@@ -1798,13 +1847,14 @@ const ROUTES = [
   {
     "id": "sun-breakfast-event",
     "day": "sun",
-    "title": "Churros → Plaza de la Villa",
+    "title": "Tirso → Santa Ana → Toledo/Cebada",
     "places": [
-      "sangines",
+      "tirso",
+      "santaana",
       "trash"
     ],
     "mode": "walking",
-    "note": "Leave breakfast by 10:15. Around 10 minutes on foot; keep extra time for street closures and crowds."
+    "note": "Meet 10:45; churros around 11:00–11:15; in position on Toledo by 11:30. Keep time for queues and crowds."
   },
   {
     "id": "sun-prado-dinner",

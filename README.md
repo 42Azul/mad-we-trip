@@ -6,7 +6,7 @@ A mobile guide for Bastien, Sam, Fer and José, **23–25 October 2026**.
 
 ## What is in the guide
 
-- Friday arrival and dinner, Saturday’s old town / MAN / Gran Vía route, and Sunday’s churros / Trashumancia / Rastro / Prado plan.
+- Friday arrival and dinner, Saturday’s old town / MAN / Gran Vía route, and Sunday’s three-person Tirso / Santa Ana churros / Toledo-Cebada flock / Rastro / Prado plan.
 - City and Spanish history, a suggested two-hour MAN visit, and references beside the relevant claims.
 - A street map with numbered stops, optional alternatives and host stations. OpenLayers renders it without WebGL.
 - A **1656 map** switch using Madrid City Council’s georeferenced Texeira scan, with the same place pins for comparison. The scan’s rectangular extent is not an urban boundary.
